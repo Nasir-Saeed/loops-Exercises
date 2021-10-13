@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="system" id="number">
+        <option value="number">--Numbers--</option>
+        <option value="even">Even Number</option>
+        <option value="odd">Odd Number</option>
+    </select>
+
+    <button onclick="onefunction()">
+        Submit
+    </button>
+    <h3 id="result"></h3>
+
+
+    <script>
+
+        function onefunction() {
+            let number = document.getElementById("number").value;
+            let html = '';
+            let arr = [];
+            if (number === "even") {
+                for (let i = 0; i <= 22; i += 2) {
+                    arr.push(i)
+                }
+            }
+            else if (number === "odd") {
+                for (let i = 1; i <= 21; i += 2) {
+                    arr.push(i)
+                }
+            }
+            else {
+                alert("Select Any One Option");
+            }
+
+            for (let i = 0; i < arr.length; i++) {
+                html += '<p>' + arr[i] + '</p>';
+            }
+
+            document.getElementById('result').innerHTML = html;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
